@@ -3,6 +3,7 @@ from django.conf.urls import url
 
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
 
 import api.views
@@ -13,7 +14,9 @@ schema_view = get_schema_view(
       title="Compendium API",
       default_version='v1',
       description="The compendium service API"
-   )
+   ),
+   public=True,
+   permission_classes=(permissions.AllowAny,),
 )
 
 router = DefaultRouter()
