@@ -26,4 +26,4 @@ class SpellGetEndpointTestCase(APITestCase):
     def test_list_returns_items(self):
         """Should return a list of existing items"""
         response = self.client.get(self.list_url)
-        assert len(response.data['results']) == 5
+        assert len(response.data) == 5
