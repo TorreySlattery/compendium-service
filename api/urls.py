@@ -21,6 +21,7 @@ schema_view = get_schema_view(
 
 router = DefaultRouter()
 router.register(r'spells', api.views.SpellViewSet)
+router.register(r'items', api.views.ItemViewSet)
 
 api_v1_urlpatterns = [
     path('', include(router.urls))

@@ -83,3 +83,40 @@ class Spell(Thing):
         default=None,
         help_text="What spell school this belongs to, e.g. evocation or conjuration"
     )
+
+
+class Item(Thing):
+    type = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        default=None,
+        help_text="A classification for grouping like items together, e.g. weapons or kits or glasses"
+    )
+
+    rarity = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        default='Common',
+        help_text="The tier of rarity assigned to this item"
+    )
+
+    requires_attunment = models.BooleanField(
+        default=False,
+        help_text="Whether the item requires attunement before it can be fully utilized"
+    )
+
+    weight = models.FloatField(
+        null=False,
+        blank=True,
+        default=0.0,
+        help_text="The numeric weight of the item (in whatever units you care to use)"
+    )
+
+    weight_units = models.CharField(
+        null=False,
+        blank=True,
+        default='pounds',
+        help_text="The default unit associated with the item's weight"
+    )

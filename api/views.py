@@ -17,8 +17,22 @@ class SpellViewSet(viewsets.ReadOnlyModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         pk = kwargs['pk']
         try:
-            spell = models.Spell.objects.get(pk=pk)
+            obj = models.Spell.objects.get(pk=pk)
         except models.Spell.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
-        serializer = serializers.SpellSerializer(spell, context={'request': request})
+        serializer = serializers.SpellSerializer(obj, context={'request': request})
+        return Response(serializer.data)
+
+
+class ItemViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = models.Item.objects.all()
+    serializer_class = serializers.ItemSerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        pk = kwargs['pk']
+        try:
+            obj = models.Item.objects.get(pk=pk)
+        except models.Item.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = serializers.ItemSerializer(obj, context={'request': request})
         return Response(serializer.data)
