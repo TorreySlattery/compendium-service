@@ -115,6 +115,7 @@ class Item(Thing):
     )
 
     weight_units = models.CharField(
+        max_length=255,
         null=False,
         blank=True,
         default='pounds',
