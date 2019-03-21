@@ -1,0 +1,47 @@
+{
+   "Antelope Rain" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a bit of antler) ",
+      "description" : "You cause a herd of antelope to appear in a spot within range. This spot does not need to be on the ground.",
+      "duration" : "Instantaneous",
+      "level" : 0,
+      "range" : "120 feet",
+      "school" : "Animal Husbandry"
+   },
+   "Googly Eyes" : {
+      "casting_time" : "1 action / ritual",
+      "components" : "V, S, M (a googly eye)",
+      "description" : "Pick a target creature in range. The target must make a constitution saving throw or else its eyes start wandering in random directions, cause it to briefly lose its sense of depth perception since it isn't used to dealing with that.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 2,
+      "range" : "30 feet",
+      "school" : "Occulomancy"
+   },
+   "Midichlorians!" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a vial of tears)",
+      "description" : "Pick any number of target creatures in range who can hear you and roll a d6 for each of them. On a roll of 3 or lower, the character becomes incensed by whatever you said, regardless of the content. Otherwise, the character shrugs and is unaffected.",
+      "duration" : "Concentration, up to 1 hour",
+      "level" : 8,
+      "range" : "Self (10-foot-radius sphere)",
+      "school" : "Bad Writing"
+   },
+   "Simmer Down" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You cause liquid in a heated container to immediately reduce to half volume as though it had been cooked long enough to do so naturally.",
+      "duration" : "Concentration, up to 1 hour",
+      "level" : 0,
+      "range" : "5 feet",
+      "school" : "Ramsaymancy"
+   },
+   "Zenith" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a grandfather clock that's bigger than you are, which the spell consumes)",
+      "description" : "You cause the sun to appear directly overhead for the next hour as though it is high noon. During this hour, the sun does not move at all. The flow of time is unaffected.",
+      "duration" : "1 hour",
+      "level" : 2,
+      "range" : "Special",
+      "school" : "Sunkeeping"
+   }
+}

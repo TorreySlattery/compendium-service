@@ -66,6 +66,14 @@ class Spell(Thing):
         help_text="How long it takes to cast the spell"
     )
 
+    duration = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        default="Instantaneous",
+        help_text="How long the spell lasts"
+    )
+
     is_concentration = models.BooleanField(
         default=False,
         help_text="Whether the spell requires concentration or not"
