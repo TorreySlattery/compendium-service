@@ -60,3 +60,19 @@ class SpellGetEndpointTestCase(ThingGetEndpointTestCase, APITestCase):
 
     def _detail_url(self, pk):
         return reverse('spell-detail', kwargs={'pk': pk})
+
+
+class ItemGetEndpointTestCase(ThingGetEndpointTestCase, APITestCase):
+    def setUp(self):
+        self.list_url = reverse('item-list')
+        items = []
+        for name in ['Longsword', 'Bag of Holding', 'Alchemy Kit', "50' of hempen rope", "Rations"]:
+            items.append(models.Item(name=name))
+        models.Item.objects.bulk_create(items)
+
+    @property
+    def objs(self):
+        return models.Item.objects.all()
+
+    def _detail_url(self, pk):
+        return reverse('item-detail', kwargs={'pk': pk})
